@@ -1,0 +1,142 @@
+html, body {
+  margin: 0; padding: 0;
+  height: 100vh; width: 100vw;
+  background-image: url('bg.jpeg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: rgb(12 10 158);
+}
+
+/* Default font for entire page */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Apply IBM Plex Mono only to the main heading */
+h1 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 70px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: rgb(12 10 158);
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 25px; /* smaller than default */
+  color: rebeccapurple;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+form {
+  padding: 30px 40px;
+  border-radius: 12px;
+  background: rgba(255 255 255 / 0.15);
+  color: black;
+  min-width: 320px;
+  max-width: 600px; /* wider for side-by-side */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* Wrap the two inputs in a row container */
+.input-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* File input */
+.input-row input[type="file"] {
+  flex: 1 1 45%;
+  min-width: 180px;
+  position: relative;
+  font-size: 1rem;
+  color: transparent; /* hide default file input text */
+  cursor: pointer;
+}
+
+/* File selector button fills input width */
+.input-row input[type="file"]::file-selector-button {
+  min-width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 48px; /* space for icon */
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  color: rebeccapurple;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: left;
+  z-index: 1;
+}
+
+/* Icon inside file input */
+.input-row input[type="file"]::before {
+  position: absolute;
+  pointer-events: none;
+  top: 50%;
+  left: 16px;
+  height: 20px;
+  width: 20px;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230964B0'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* Remove ::after text from file input */
+.input-row input[type="file"]::after {
+  content: none;
+}
+
+/* Email input */
+.input-row input[type="email"] {
+  margin-top: 0px;
+  flex: 1 1 55%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Submit button */
+button {
+  margin-top: 16px;
+  padding: 14px 40px;
+  align-self: center;
+  background-color: rgb(130 8 213);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  width: auto;
+}
+
+button:hover {
+  background-color: rgb(90, 4, 150);
+}
